@@ -42,6 +42,8 @@ export default createGlobalStyle`
   a:link 
   { 
     text-decoration:none; 
+    font-family: Inter_600;
+    
   } 
 
 `; 
