@@ -19,4 +19,12 @@ export const Container = styled.div`
             color: ${props => props.theme.colors.footer_text_Red};
         }
     }
+
+    @media only screen and (min-width: 320px) and (max-width: 700px){
+        justify-content: center;
+
+        span {
+            margin: 0;
+        }
+    }
 `;

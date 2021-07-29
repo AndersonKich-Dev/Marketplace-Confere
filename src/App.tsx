@@ -4,6 +4,7 @@ import Card from './components/Cards'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Main from './components/Main'
+
 import db from './db/db.json'
 import { ListProducts } from './types/api'
 
@@ -20,6 +21,13 @@ function App() {
   return (
     <S.Container>
       <Header/>
+
+     
+      <Main>
+        {database.products.map((item)=>(
+          <Card product={item}/>
+        ))}
+      </Main>
 
       <Footer/>
     </S.Container>  

@@ -10,7 +10,7 @@ type OnSale = {
 export const Container = styled.div`
     position: relative;
     width: 22%;
-    height: 75%;
+    height: 85%;
     background-color: ${props => props.theme.colors.card_white};
     border-radius: 0.312rem;
     display: flex;
@@ -19,6 +19,7 @@ export const Container = styled.div`
     margin: 1rem;
     box-shadow: 0px 0px 5px 0px #000000;
     cursor: pointer;
+    flex-shrink: 0;
 
     svg {
         position: absolute;
@@ -40,6 +41,20 @@ export const Container = styled.div`
 :hover {
     transform: scale(1.1);
 }
+
+    @media only screen and (min-width: 700px) and (max-width: 1080px){
+        
+    }
+
+    @media only screen and (min-width: 320px) and (max-width: 700px){
+        width: 290px;
+        height: 380px;
+        
+        :hover {
+            transform: scale(1);
+            filter: brightness(80%);
+        }
+    }
     
 `;
 
