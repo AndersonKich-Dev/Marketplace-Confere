@@ -13,6 +13,7 @@
     image: string
     installments: string
     name: string
+    style: string
     on_sale: boolean
     regular_price: string
     sizes: Size[]

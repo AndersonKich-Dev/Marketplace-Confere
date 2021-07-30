@@ -4,26 +4,39 @@ import notFound from '../../assets/default.png'
 import { RiShoppingCart2Line, RiShoppingCartFill } from 'react-icons/ri'
 import { Product } from '../../types/api'
 
+import { useSelector, useDispatch } from 'react-redux'
+
+
+import allActions from '../../actions'
+
+
 type Props = {
-    product: Product
+    product: Product,
 }
 
 
-export default function Card({product}: Props) {
+const Card = ({product}: Props) => {
 
     const [selectItem, setSelectItem] = useState(false)
     const [onSale, setOnSale] = useState(product.on_sale)
 
+
     useEffect(()=>{
-        
+      
     },[])
+
+    const dispatch = useDispatch()
+
+    function addProduct(){
+        dispatch(allActions.carAction.selectProduct(product, 'flex'))
+    }
 
     const addToCart = () =>{
         setSelectItem(!selectItem)
-    }
+    } 
 
     return(
-        <S.Container onClick={addToCart}>
+        <S.Container onClick={addProduct}>
             {!selectItem ? <RiShoppingCart2Line color='#525252'/> : <RiShoppingCartFill color='#D75413'/>}
             <img src={!product.image ? notFound : product.image} alt='Teste'/>
 
@@ -48,3 +61,7 @@ export default function Card({product}: Props) {
         </S.Container>
     )
 }
+
+
+export default (Card)
+
