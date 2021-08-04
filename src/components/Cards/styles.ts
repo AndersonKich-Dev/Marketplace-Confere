@@ -9,8 +9,8 @@ type OnSale = {
 
 export const Container = styled.div`
     position: relative;
-    width: 22%;
-    height: 85%;
+    width: 18.75rem;
+    height: 25.625rem;
     background-color: ${props => props.theme.colors.card_white};
     border-radius: 0.312rem;
     display: flex;
@@ -18,7 +18,6 @@ export const Container = styled.div`
     align-items: center;
     margin: 1rem;
     box-shadow: 0px 0px 5px 0px #000000;
-    cursor: pointer;
     flex-shrink: 0;
 
     svg {
@@ -27,6 +26,7 @@ export const Container = styled.div`
         left: 0.5rem;
         z-index: 1;
         font-size: 1.6rem;
+        cursor: pointer;
     }
 
     img {
@@ -36,24 +36,9 @@ export const Container = styled.div`
        
     }
 
-    transition: all .5s ease-in-out;
-
-:hover {
-    transform: scale(1.1);
-}
-
-    @media only screen and (min-width: 700px) and (max-width: 1080px){
-        
-    }
-
     @media only screen and (min-width: 320px) and (max-width: 700px){
-        width: 290px;
-        height: 380px;
-        
-        :hover {
-            transform: scale(1);
-            filter: brightness(80%);
-        }
+        width: 18.125rem;
+        height: 23.75rem;
     }
     
 `;
@@ -78,16 +63,16 @@ export const Information = styled.div`
     position: absolute;
     top: 0;
     right: 0;
-    border: 30px solid;
+    border: 1.875rem solid;
     border-color: ${props => props.theme.colors.card_Orange} ${props => props.theme.colors.card_Orange} transparent transparent;
     ${props => props.onsale ? setDisplay('block') : setDisplay('none')}
 
     span {
         position: absolute;
-        top: -23px;
+        top: -1.438rem;
         left: 0;
         color: white;
-        font-size: 14px;
+        font-size: 0.875rem;
         transform: rotate(45deg);
     }
  `;
@@ -107,7 +92,7 @@ export const Information = styled.div`
 
     p {
         font-size: .875rem;
-        font-family: Lexend_600;
+        font-family: Lexend_600, sans-serif;
     }
 
 
@@ -119,3 +104,40 @@ export const Information = styled.div`
     font-size: 0.625rem;
  
  `;
+
+ export const BtnDetails = styled.div`
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .5s ease-in-out;
+
+    button {
+        padding: 0.875rem 3rem;
+        border-radius: .5rem;
+        background-color: ${props => props.theme.colors.card_button_green};
+        color: black;
+        transform: translateY(1.875rem);
+        visibility: hidden;
+        opacity: 0;
+        transition: all .5s ease-in-out;
+    }
+
+    :hover {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    :hover button{
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0px);
+    }
+ `;
+
+ 

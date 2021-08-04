@@ -6,7 +6,7 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: ${props => props.theme.colors.home_bg};
+    background: linear-gradient(107deg, rgba(255,92,127,1) 8%, rgba(236,16,120,1) 17%, rgba(243,40,88,1) 71%);
 `;
 
 export const HomeBox = styled.div`
@@ -51,7 +51,7 @@ export const InfoStore = styled.div`
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: ${props => props.theme.colors.home_text_Gray};
+    color: ${props => props.theme.colors.card_white_100};
 
     h1 {
         text-transform: uppercase;

@@ -22,3 +22,14 @@
   export type ListProducts = {
     products: Product[]
   }
+
+  export type PurchasedProduct = {
+    createAt: Date
+    name: string
+    image: string
+    size: string
+    style: string
+    count: number
+    actual_price: string
+    totalPrice: number
+  }

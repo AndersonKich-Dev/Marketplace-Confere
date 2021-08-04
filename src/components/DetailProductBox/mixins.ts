@@ -29,3 +29,15 @@ export function toogleBackground() {
         }
     `;
 }
+
+export function hiddenVisibilityPopUp() {
+    return`
+        visibility: hidden;
+    `;
+}
+
+export function visibleVisibilityPopUp() {
+    return`
+        visibility: visible;
+    `;
+}
